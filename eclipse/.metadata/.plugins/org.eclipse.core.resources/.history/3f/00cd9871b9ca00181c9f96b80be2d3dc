@@ -1,0 +1,8 @@
+package com.cahoot.auction.controllers;
+
+public class AuctionController {
+
+	public List<> list() {
+		return ArrayList<>();
+	}
+}

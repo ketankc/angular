@@ -1,0 +1,19 @@
+install nodejs
+	lts/latest
+	
+https://angular.io/guide/quickstart
+
+npm -g i @angular/cli
+
+ng new project1
+
+	module
+	component
+	template
+
+typescript
+es6
+	
+ng serve
+ng build
+ng build --watch

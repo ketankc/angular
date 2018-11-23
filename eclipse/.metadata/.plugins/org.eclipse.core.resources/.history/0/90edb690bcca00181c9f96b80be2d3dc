@@ -1,0 +1,37 @@
+package com.cahoot.auction.controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cahoot.auction.models.Auction;
+import com.cahoot.auction.repositories.AuctionRepository;
+
+@RestController
+@RequestMapping("/api/v1/auctions")
+public class AuctionController {
+
+	@Autowired
+	private AuctionRepository auctionRepository;
+	
+	@GetMapping
+	public List<Auction> list() {
+		return auctionRepository.findAll();
+	}
+	
+	@PostMapping
+	public void create(@RequestBody Auction auction) {
+		auctionRepository.save(auction);
+	}
+	
+	@GetMapping("/{id}")
+	public Auction get(Long id) {
+		return auctionRepository.getOne(id);
+	}
+}

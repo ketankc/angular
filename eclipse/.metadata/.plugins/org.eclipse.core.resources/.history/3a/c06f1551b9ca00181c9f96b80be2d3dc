@@ -1,0 +1,5 @@
+package com.cahoot.auction.models;
+
+public class Auction {
+
+}

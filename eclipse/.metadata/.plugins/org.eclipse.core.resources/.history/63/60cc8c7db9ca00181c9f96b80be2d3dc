@@ -1,0 +1,12 @@
+package com.cahoot.auction.controllers;
+
+import java.util.List;
+
+import com.cahoot.auction.models.Auction;
+
+public class AuctionController {
+
+	public List<Auction> list() {
+		return new ArrayList<Auction>();
+	}
+}

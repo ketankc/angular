@@ -1,0 +1,5 @@
+package com.cahoot.auction.controllers;
+
+public class AuctionController {
+
+}
